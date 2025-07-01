@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://chjfmewa28jw"]
+
+[ext_resource type="Script" uid="uid://7im7bett4a83" path="res://ghost.gd" id="1_v5pp4"]
+
+[node name="Ghost" type="Node2D"]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_v5pp4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3, -138)
