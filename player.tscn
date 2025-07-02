@@ -314,9 +314,9 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.8, 0.8)
+collision_mask = 30
 script = ExtResource("1_7lmhl")
-ghost_scene = ExtResource("2_q13i1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(3, -138)
@@ -335,4 +335,17 @@ libraries = {
 speed_scale = 0.25
 
 [node name="Ghost" parent="." instance=ExtResource("2_q13i1")]
+visible = false
 metadata/_edit_group_ = true
+
+[node name="PlatformDetector" type="RayCast2D" parent="."]
+target_position = Vector2(0, 6)
+collision_mask = 8
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -28)
+offset = Vector2(0, 50)
+limit_left = -715
+limit_top = -250
+limit_right = 1425
+limit_bottom = 690
