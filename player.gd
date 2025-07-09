@@ -59,5 +59,5 @@ func spawn_ghost():
 		anim_sprite.frame,
 		global_position,
 		anim_sprite.flip_h,
-		Color(1,1,1, 0.5)
+		Color(92,92,255,0.3)
 	)
