@@ -12,11 +12,11 @@ func handle_input(_event: InputEvent) -> void:
 	pass
 
 ## Called by the state machine on the engine's main loop tick.
-func update(_delta: float) -> void:
+func process(_delta: float) -> void:
 	pass
 
 ## Called by the state machine on the engine's physics update tick.
-func physics_update(_delta: float) -> void:
+func physics_process(_delta: float) -> void:
 	pass
 
 ## Called by the state machine upon changing the active state. The `data` parameter

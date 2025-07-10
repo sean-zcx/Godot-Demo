@@ -1,16 +1,19 @@
-extends MotionState
+extends PlayerState
+
+@export var RUN_SPEED:float = 300
+@export var RUN_ACCELECTION:float = 1000
+@export var RUN_TURNING_SPEED:float = RUN_ACCELECTION / 10
 
 func enter(previous_state_path: String, data := {}) -> void:
-	#var input_direction := get_input_direction()
-	#update_look_direction(input_direction)
-	player.animation_player.play("run")
+	owner.jump_count = 0
+	player.animation_player.play("accelerate")
 
-func physics_update(delta: float) -> void:
-	super.physics_update(delta)
+func physics_process(delta: float) -> void:
 	var input_direction_x := Input.get_axis("move_left", "move_right")
-	player.velocity.x = player.speed * input_direction_x
-	player.velocity.y += player.gravity * delta
-	player.move_and_slide()
+	#player.velocity.x = player.speed * input_direction_x
+	#player.velocity.y += player.gravity * delta
+	#
+	#player.velocity.x = move_toward(player.velocity.x, RUN_SPEED * player.direction.x, RUN_ACCELECTION * delta)
 	
 	
 	if not player.is_on_floor():
@@ -19,3 +22,8 @@ func physics_update(delta: float) -> void:
 		finished.emit(JUMPING)
 	elif is_zero_approx(input_direction_x):
 		finished.emit(BREAKING)
+	else:
+		player.velocity.x = move_toward(player.velocity.x, RUN_SPEED * input_direction_x, RUN_ACCELECTION * delta)
+		if abs(player.velocity.x) > RUN_TURNING_SPEED:
+			player.animation_player.play("run")
+	player.move_and_slide()
