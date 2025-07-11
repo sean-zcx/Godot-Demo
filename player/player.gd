@@ -1,11 +1,14 @@
 class_name Player extends CharacterBody2D
 
 @export var speed := 300.0
-@export var gravity := 1800.0
+#@export var gravity := 1800.0
+@export var gravity := 18.0
+
 @export var jump_impulse := 700.0
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 
 var DEFAULE_GRAVITY = ProjectSettings.get_setting('physics/2d/default_gravity')
 const MAX_JUMP_COUNT = 2
@@ -19,6 +22,8 @@ var jump_count = 0
 
 func _ready() -> void:
 	print("Player ready")
+	change_collision_shape('fall')
+
 
 func checkFacingDirection() -> void:
 	var direction_x = Input.get_axis(&"move_left", &"move_right")
@@ -27,3 +32,9 @@ func checkFacingDirection() -> void:
 
 func _physics_process(delta: float) -> void:
 	checkFacingDirection()
+
+func change_collision_shape(shapeName = 'idle'):
+	if (shapeName in CollisionShapes.collisionShapePath):
+		# 设置碰撞区域
+		collision_shape_2d.set_deferred('position', CollisionShapes.collisionShapePath[shapeName].position)
+		collision_shape_2d.set_deferred('shape', CollisionShapes.collisionShapePath[shapeName].shape)
