@@ -24,11 +24,11 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _process(delta: float) -> void:
-	state.update(delta)
+	state.process(delta)
 
 
 func _physics_process(delta: float) -> void:
-	state.physics_update(delta)
+	state.physics_process(delta)
 
 
 func _transition_to_next_state(target_state_path: String, data: Dictionary = {}) -> void:

@@ -1,11 +1,11 @@
-extends MotionState
+extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
 	player.velocity.x = 0.0
-	player.animation_player.play("idle")
+	player.animation_player.play("idle_2")
 
-func physics_update(delta: float) -> void:
-	super.physics_update(delta)
+func physics_process(delta: float) -> void:
+	#super.physics_process(delta)
 	player.velocity.y += player.gravity * delta
 	player.move_and_slide()
 	var input_direction_x := Input.get_axis("move_left", "move_right")

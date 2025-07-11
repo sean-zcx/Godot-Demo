@@ -1,9 +1,8 @@
-[gd_scene load_steps=46 format=3 uid="uid://drjkmyrrl0l6u"]
+[gd_scene load_steps=44 format=3 uid="uid://drjkmyrrl0l6u"]
 
 [ext_resource type="Script" uid="uid://cfhltnerm4jwu" path="res://player/player.gd" id="1_65viv"]
 [ext_resource type="Texture2D" uid="uid://c8bskdnsucymc" path="res://player/res/break/frame_29.png" id="1_c35mf"]
 [ext_resource type="Texture2D" uid="uid://cqjm08nj45vjo" path="res://player/res/idle1/frame_0.png" id="1_ebec5"]
-[ext_resource type="Texture2D" uid="uid://dcf6n60nshs7s" path="res://player/res/accelerate/frame_103.png" id="2_2uvqg"]
 [ext_resource type="Texture2D" uid="uid://du37fn6710s6v" path="res://player/res/break/frame_97.png" id="2_65viv"]
 [ext_resource type="Texture2D" uid="uid://dpkmux7ubod1g" path="res://player/res/idle1/frame_1.png" id="2_yllr7"]
 [ext_resource type="Texture2D" uid="uid://hiqpg6s5lu21" path="res://player/res/idle1/frame_2.png" id="3_kb6p2"]
@@ -34,14 +33,6 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kqu6x"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_2uvqg")
-}],
-"loop": true,
-"name": &"af_accelerate",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_c35mf")
@@ -436,39 +427,9 @@ tracks/1/keys = {
 "values": [0, 1, 2, 3]
 }
 
-[sub_resource type="Animation" id="Animation_1s1yo"]
-resource_name = "accelerate"
-loop_mode = 1
-step = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"af_accelerate"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x7c3f"]
 _data = {
 &"RESET": SubResource("Animation_65viv"),
-&"accelerate": SubResource("Animation_1s1yo"),
 &"break": SubResource("Animation_bjvpn"),
 &"double_jump": SubResource("Animation_r7pn3"),
 &"fall": SubResource("Animation_knn7v"),

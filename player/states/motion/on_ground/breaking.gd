@@ -1,13 +1,13 @@
-extends MotionState
+extends PlayerState
 
-var break_time = 0.2
+var break_time = 0.15
 
 func enter(previous_state_path: String, data := {}) -> void:
 	player.velocity.x = 0.0
 	player.animation_player.play("break")
 	state_time = break_time
 
-func physics_update(_delta: float) -> void:
+func physics_process(_delta: float) -> void:
 	state_time -= _delta
 	
 	

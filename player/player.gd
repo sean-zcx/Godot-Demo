@@ -1,24 +1,29 @@
 class_name Player extends CharacterBody2D
 
-@export var speed := 150.0
+@export var speed := 300.0
 @export var gravity := 1800.0
 @export var jump_impulse := 700.0
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
-signal direction_changed(new_direction: Vector2)
+var DEFAULE_GRAVITY = ProjectSettings.get_setting('physics/2d/default_gravity')
+const MAX_JUMP_COUNT = 2
 
-var look_direction := Vector2.RIGHT:
-	set(value):
-		look_direction = value
-		set_look_direction(value)
+#var direction = Vector2(0, 0):
+	#set(direction):
+		#if (!is_zero_approx(direction.x)):
+			#animated_sprite_2d.scale.x = -1 if direction.x < 0 else 1
 
-func set_look_direction(value: Vector2) -> void:
-	print('direction_changed Changed')
-	direction_changed.emit(value)
+var jump_count = 0
 
+func _ready() -> void:
+	print("Player ready")
 
-func _on_direction_changed(new_direction: Vector2) -> void:
-	print("Should flip")
-	animated_sprite_2d.scale.x *= -1
+func checkFacingDirection() -> void:
+	var direction_x = Input.get_axis(&"move_left", &"move_right")
+	if (!is_zero_approx(direction_x)):
+			animated_sprite_2d.scale.x = -1 if direction_x < 0 else 1
+
+func _physics_process(delta: float) -> void:
+	checkFacingDirection()
