@@ -15,4 +15,5 @@ func physics_process(delta: float) -> void:
 		player.animation_player.play("stay_in_air")
 
 	if player.velocity.y >= 100:
-		finished.emit(FALLING)
+		#finished.emit(FALLING)
+		pass
