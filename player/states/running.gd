@@ -17,8 +17,8 @@ func physics_process(delta: float) -> void:
 	if not player.is_on_floor():
 		#finished.emit(FALLING)
 		pass
-	elif Input.is_action_just_pressed("jump"):
-		finished.emit(JUMPING)
+	#elif Input.is_action_just_pressed("jump"):
+		#finished.emit(JUMPING)
 	
 	#elif is_zero_approx(input_direction_x):
 		#finished.emit(IDLE)

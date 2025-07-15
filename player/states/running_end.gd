@@ -6,7 +6,6 @@ func enter(previous_state_path: String, data := {}) -> void:
 	done_anim = false
 	player.change_collision_shape('running_end')
 	player.animation_player.play("running_end")
-	#player.animation_player.animation_finished.connect(on_animation_finished)
 
 func on_animation_finished(anim_name):
 	if anim_name == "running_end":
@@ -32,9 +31,3 @@ func physics_process(delta: float) -> void:
 		finished.emit(RUNNING)	
 
 	player.move_and_slide()
-
-
-#func _on_finished(next_state_path: String, data: Dictionary) -> void:
-	#if anim_name == "running_end":
-		#print("running_end finished")
-		#done_anim = true
