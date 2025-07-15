@@ -4,7 +4,7 @@ const IDLE = "Idle"
 const RUNNING = "Running"
 const JUMPING = "Jumping"
 const FALLING = "Falling"
-const BREAKING = "Breaking"
+const RUNNING_END = "RunningEnd"
 
 var player: Player
 

@@ -3,6 +3,8 @@ class_name StateMachine extends Node
 ## The initial state of the state machine. If not set, the first child node is used.
 @export var initial_state: State = null
 
+@onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
+
 ## The current state of the state machine.
 @onready var state: State = (func get_initial_state() -> State:
 	return initial_state if initial_state != null else get_child(0)
@@ -16,6 +18,7 @@ func _ready() -> void:
 	# State machines usually access data from the root node of the scene they're part of: the owner.
 	# We wait for the owner to be ready to guarantee all the data and nodes the states may need are available.
 	await owner.ready
+	animation_player.animation_finished.connect(_on_anim_finished)
 	state.enter("")
 	
 
@@ -40,3 +43,8 @@ func _transition_to_next_state(target_state_path: String, data: Dictionary = {})
 	state.exit()
 	state = get_node(target_state_path)
 	state.enter(previous_state_path, data)
+
+func _on_anim_finished(anim_name):
+	if state and "on_animation_finished" in state:
+		print("Calling ", state, " on_animation_finished")
+		state.on_animation_finished(anim_name)
