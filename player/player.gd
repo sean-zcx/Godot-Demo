@@ -26,17 +26,16 @@ var shapes
 func _ready() -> void:
 	print("Player ready")
 	shapes = [running_begin_shape, running_end_shape, running_shape, idle_shape]
-	#animated_sprite_2d.scale.x = -1
 		
 func checkFacingDirection() -> void:
 	var direction_x = Input.get_axis(&"move_left", &"move_right")
 	if (!is_zero_approx(direction_x)):
-		animated_sprite_2d.scale.x = -1 if direction_x < 0 else 1
-		for shape in shapes:
-			shape.position.x = shape.position.x * (-1 if direction_x < 0 else 1)
+		pass
+		#owner.scale.x = -1 if direction_x < 0 else 1
 
 func _physics_process(delta: float) -> void:
-	checkFacingDirection()
+	pass
+	#checkFacingDirection()
 
 func _disable_shapes():
 	idle_shape.disabled = true

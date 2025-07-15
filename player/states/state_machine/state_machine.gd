@@ -2,8 +2,8 @@ class_name StateMachine extends Node
 
 ## The initial state of the state machine. If not set, the first child node is used.
 @export var initial_state: State = null
-
 @onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
+
 
 ## The current state of the state machine.
 @onready var state: State = (func get_initial_state() -> State:
