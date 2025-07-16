@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4fl6us3n1446"
-path="res://.godot/imported/ma000_08.png-3bb431dea6b96e7599c01407940f037b.ctex"
+uid="uid://brp5fraq68kvn"
+path="res://.godot/imported/turning_2.png-5dd898b3d92ff0d5ad0d9109b715e7e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/sprites/idle_1/ma000_08.png"
-dest_files=["res://.godot/imported/ma000_08.png-3bb431dea6b96e7599c01407940f037b.ctex"]
+source_file="res://player/sprites/turning/turning_2.png"
+dest_files=["res://.godot/imported/turning_2.png-5dd898b3d92ff0d5ad0d9109b715e7e6.ctex"]
 
 [params]
 
