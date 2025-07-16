@@ -9,25 +9,34 @@ class_name Player extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 var DEFAULE_GRAVITY = ProjectSettings.get_setting('physics/2d/default_gravity')
-var last_scale_x = 1
+enum FACING_DIRECTION{LEFT, RIGHT}
+
+#var direction = Vector2(0, 0):
+	#set(value):
+		#direction = value
+		#if (!is_zero_approx(direction.x)):
+			#animated_sprite_2d.scale.x = 1 if direction.x == DIRECTION.LEFT else -1
+#var face_direction = -1
+
+	
+var last_scale_x  = 1
 var is_turning = false
+
 
 func _ready() -> void:
 	print("Player ready")
 
 func _physics_process(delta: float) -> void:
-	checkFacingDirection()
-
-func checkFacingDirection() -> void:
-	var direction_x = Input.get_axis(&"move_left", &"move_right")
-	if (!is_zero_approx(direction_x)):
-		# flip sprite
-		animated_sprite_2d.scale.x = 1 if direction_x < 0 else -1
-		# notify turning
-		if animated_sprite_2d.scale.x != last_scale_x:
-			print("turning happened")
-			is_turning = true
+	if not is_zero_approx(velocity.x): 
+		if velocity.x < 0.0:
+			animated_sprite_2d.scale.x = 1.0
 		else:
-			is_turning = false
+			animated_sprite_2d.scale.x = -1.0
 			
-		last_scale_x = animated_sprite_2d.scale.x
+		if sign(last_scale_x) != sign(animated_sprite_2d.scale.x):
+			print('player is turning')
+			animation_player.play("turning")
+		last_scale_x = animated_sprite_2d.scale.x 
+
+func get_movemonet_direction() -> Vector2:
+	return Vector2(Input.get_axis("move_left", "move_right"), Input.get_axis("move_up", "move_down"))

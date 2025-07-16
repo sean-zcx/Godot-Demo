@@ -10,4 +10,4 @@ func physics_process(delta: float) -> void:
 	var input_direction_x := Input.get_axis("move_left", "move_right")
 	
 	if !is_zero_approx(input_direction_x):
-		finished.emit(RUNNING)
+		finished.emit(RUNNING_BEGIN)
