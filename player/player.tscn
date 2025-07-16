@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://cuctu056mc3w8" path="res://player/states/running.gd" id="4_uw77l"]
 [ext_resource type="Texture2D" uid="uid://cb8plch5un0jk" path="res://mai_res/PC Computer - BlazBlue Centralfiction - Mai Natsume (1)/idle_1/ma000_04.png" id="5_pnw6m"]
 [ext_resource type="Texture2D" uid="uid://snqtplmruvko" path="res://mai_res/PC Computer - BlazBlue Centralfiction - Mai Natsume (1)/idle_1/ma000_05.png" id="6_1so5t"]
-[ext_resource type="Script" path="res://player/states/running_end.gd" id="6_5ejfk"]
+[ext_resource type="Script" uid="uid://dvuuuq2ejux6p" path="res://player/states/running_end.gd" id="6_5ejfk"]
 [ext_resource type="Texture2D" uid="uid://d3xjiqcm5y8q6" path="res://mai_res/PC Computer - BlazBlue Centralfiction - Mai Natsume (1)/idle_1/ma000_07.png" id="8_dx5ib"]
 [ext_resource type="Texture2D" uid="uid://b2pkhnafj85gj" path="res://mai_res/PC Computer - BlazBlue Centralfiction - Mai Natsume (1)/idle_1/ma000_08.png" id="9_a2xo5"]
 [ext_resource type="Texture2D" uid="uid://biuv5e56ti3dd" path="res://mai_res/PC Computer - BlazBlue Centralfiction - Mai Natsume (1)/idle_1/ma000_09.png" id="10_art4l"]
@@ -110,7 +110,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"running",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -136,16 +136,229 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("32_ge24q")
 }],
-"loop": true,
+"loop": false,
 "name": &"running_end",
 "speed": 5.0
 }]
 
-[sub_resource type="Animation" id="Animation_5ejfk"]
-length = 0.001
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uw77l"]
 size = Vector2(60, 350)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jd2rm"]
+size = Vector2(100, 320)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1so5t"]
+size = Vector2(100, 320)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rptt4"]
+size = Vector2(100, 320)
+
+[sub_resource type="Animation" id="Animation_5ejfk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IdleShape:shape")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_uw77l")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("IdleShape:shape:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(60, 350)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("IdleShape:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 12)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:sprite_frames")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("SpriteFrames_2uvqg")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"running"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatedSprite2D:centered")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimatedSprite2D:offset")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimatedSprite2D:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("RunningShape:shape")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_rptt4")]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("RunningShape:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 36.67)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("RunningShape:shape:size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(100, 320)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("RunningBeginShape:shape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_jd2rm")]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("RunningBeginShape:shape:size")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(100, 320)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("RunningBeginShape:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 68)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("RunningEndShape:shape")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_1so5t")]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("RunningEndShape:shape:size")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(100, 320)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("RunningEndShape:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 6)]
+}
 
 [sub_resource type="Animation" id="Animation_1s1yo"]
 resource_name = "idle_1"
@@ -203,26 +416,26 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("IdleShape:shape:size")
+tracks/4/path = NodePath("IdleShape:shape")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0, 11),
 "transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(60, 350), Vector2(60, 350)]
+"update": 1,
+"values": [SubResource("RectangleShape2D_uw77l"), SubResource("RectangleShape2D_uw77l")]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("IdleShape:shape")
+tracks/5/path = NodePath("IdleShape:shape:size")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0, 11),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [SubResource("RectangleShape2D_uw77l"), SubResource("RectangleShape2D_uw77l")]
+"values": [Vector2(60, 350), Vector2(60, 350)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -237,9 +450,6 @@ tracks/6/keys = {
 "values": [Vector2(0, 12), Vector2(0, 12)]
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rptt4"]
-size = Vector2(180, 285)
-
 [sub_resource type="Animation" id="Animation_ge24q"]
 resource_name = "running"
 length = 10.0
@@ -252,10 +462,10 @@ tracks/0/path = NodePath("AnimatedSprite2D:sprite_frames")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 9),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg")]
+"values": [SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -264,46 +474,46 @@ tracks/1/path = NodePath("AnimatedSprite2D:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 9),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [&"running", &"running"]
+"values": [&"running", &"running", &"running", &"running", &"running", &"running", &"running", &"running", &"running", &"running"]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("AnimatedSprite2D:offset")
+tracks/2/path = NodePath("AnimatedSprite2D:centered")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(0, -350), Vector2(0, -364), Vector2(0, -364), Vector2(0, -364), Vector2(0, -350), Vector2(0, -350), Vector2(0, -364), Vector2(0, -364), Vector2(0, -364), Vector2(0, -350)]
+"values": [true, true, true, true, true, true, true, true, true, true]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("AnimatedSprite2D:frame")
+tracks/3/path = NodePath("AnimatedSprite2D:offset")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("AnimationPlayer:speed_scale")
+tracks/4/path = NodePath("AnimatedSprite2D:frame")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [10.0, 10.0]
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -312,62 +522,35 @@ tracks/5/path = NodePath("RunningShape:shape")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [SubResource("RectangleShape2D_rptt4"), SubResource("RectangleShape2D_rptt4"), SubResource("RectangleShape2D_rptt4"), SubResource("RectangleShape2D_rptt4"), SubResource("RectangleShape2D_rptt4"), SubResource("RectangleShape2D_rptt4"), SubResource("RectangleShape2D_rptt4"), SubResource("RectangleShape2D_rptt4"), SubResource("RectangleShape2D_rptt4"), SubResource("RectangleShape2D_rptt4")]
+"times": PackedFloat32Array(0, 9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [SubResource("RectangleShape2D_rptt4"), SubResource("RectangleShape2D_rptt4")]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("RunningShape:shape:size")
+tracks/6/path = NodePath("RunningShape:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [Vector2(171, 285), Vector2(172, 300.938), Vector2(170.333, 309), Vector2(158.667, 306.008), Vector2(173, 293), Vector2(184.833, 288.156), Vector2(185.667, 304.313), Vector2(186.5, 300), Vector2(179.5, 305), Vector2(186.5, 291)]
+"times": PackedFloat32Array(0, 9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 36.67), Vector2(0, 36.67)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("RunningShape:position")
+tracks/7/path = NodePath("RunningShape:shape:size")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [Vector2(-103.5, -144.563), Vector2(-100, -152.531), Vector2(-101.167, -156.5), Vector2(-107.333, -155.004), Vector2(-97.5, -149.5), Vector2(-92.4167, -146.922), Vector2(-92.8333, -154.844), Vector2(-93.25, -152), Vector2(-96.75, -153.5), Vector2(-93.25, -146.5)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("AnimatedSprite2D:scale")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
 "times": PackedFloat32Array(0, 9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-1, 1), Vector2(-1, 1)]
+"values": [Vector2(100, 320), Vector2(100, 320)]
 }
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("AnimatedSprite2D:rotation")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 0.0]
-}
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jd2rm"]
-size = Vector2(157, 291)
 
 [sub_resource type="Animation" id="Animation_q28gw"]
 resource_name = "running_begin"
@@ -376,38 +559,38 @@ step = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/path = NodePath("AnimatedSprite2D:sprite_frames")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"running_begin"]
+"values": [SubResource("SpriteFrames_2uvqg")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0]
+"values": [&"running_begin"]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("AnimatedSprite2D:offset")
+tracks/2/path = NodePath("AnimatedSprite2D:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -340)]
+"update": 1,
+"values": [0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -431,31 +614,19 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(157, 291)]
+"values": [Vector2(100, 320)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("AnimatedSprite2D:scale")
+tracks/5/path = NodePath("RunningBeginShape:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-1, 1)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("AnimatedSprite2D:rotation")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
+"values": [Vector2(0, 68)]
 }
 
 [sub_resource type="Animation" id="Animation_pnw6m"]
@@ -469,10 +640,10 @@ tracks/0/path = NodePath("AnimatedSprite2D:sprite_frames")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg")]
+"values": [SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -481,106 +652,70 @@ tracks/1/path = NodePath("AnimatedSprite2D:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [&"running_end", &"running_end", &"running_end", &"running_end", &"running_end"]
+"values": [&"running_end", &"running_end"]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("AnimatedSprite2D:offset")
+tracks/2/path = NodePath("AnimatedSprite2D:centered")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [Vector2(-40, -305), Vector2(-25, -268), Vector2(-37, -267), Vector2(-19, -301), Vector2(-24, -337)]
+"values": [true, true]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("AnimatedSprite2D:centered")
+tracks/3/path = NodePath("AnimatedSprite2D:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0, 1, 2, 3, 4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [false, false, false, false, false]
+"values": [0, 1, 2, 3, 4]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("AnimatedSprite2D:frame")
+tracks/4/path = NodePath("RunningEndShape:shape")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4]
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [SubResource("RectangleShape2D_1so5t"), SubResource("RectangleShape2D_1so5t")]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("AnimationPlayer:speed_scale")
+tracks/5/path = NodePath("RunningEndShape:shape:size")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0, 4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [10.0, 10.0]
+"values": [Vector2(100, 320), Vector2(100, 320)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("RunningEndShape:shape:size")
+tracks/6/path = NodePath("RunningEndShape:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [Vector2(124, 290), Vector2(124, 246), Vector2(124, 257), Vector2(124, 281), Vector2(145, 321)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("RunningEndShape:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [Vector2(-81, -145), Vector2(-81, -123), Vector2(-81, -128.5), Vector2(-81, -140.5), Vector2(-96.5, -160.5)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("AnimatedSprite2D:rotation")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
 "times": PackedFloat32Array(0, 4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 0.0]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("AnimatedSprite2D:scale")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-1, 1), Vector2(-1, 1)]
+"values": [Vector2(0, 6), Vector2(0, 6)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jd2rm"]
@@ -592,15 +727,12 @@ _data = {
 &"running_end": SubResource("Animation_pnw6m")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1so5t"]
-size = Vector2(124, 290)
-
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_65viv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2uvqg")
-animation = &"idle_1"
+animation = &"running"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -630,17 +762,15 @@ script = ExtResource("6_5ejfk")
 
 [node name="RunningBeginShape" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(-105.5, -147.5)
+position = Vector2(0, 68)
 shape = SubResource("RectangleShape2D_jd2rm")
 
 [node name="RunningEndShape" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-81, -145)
+position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_1so5t")
 
 [node name="RunningShape" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-99, -144.563)
+position = Vector2(0, 36.67)
 shape = SubResource("RectangleShape2D_rptt4")
 
 [node name="IdleShape" type="CollisionShape2D" parent="."]

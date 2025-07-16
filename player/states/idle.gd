@@ -2,7 +2,7 @@ extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
 	player.velocity.x = 0.0
-	#player.change_collision_shape('idle')
+	player.change_collision_shape('idle')
 	player.animation_player.play("idle_1")
 
 func physics_process(delta: float) -> void:
