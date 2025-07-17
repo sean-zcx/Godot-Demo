@@ -7,8 +7,8 @@ func enter(previous_state_path: String, data := {}) -> void:
 	is_running_begin_anim_done = false
 
 func physics_process(delta: float) -> void:
-	var input_direction_x := Input.get_axis("move_left", "move_right")
-	player.velocity.x = move_toward(player.velocity.x, player.RUN_SPEED * input_direction_x, player.RUN_ACCELECTION * delta)
+	var input_direction := player.get_input_direction()
+	player.velocity.x = move_toward(player.velocity.x, player.RUN_SPEED * input_direction.x, player.RUN_ACCELECTION * delta)
 	player.move_and_slide()
 	
 	if is_running_begin_anim_done :
@@ -20,6 +20,8 @@ func physics_process(delta: float) -> void:
 		
 	elif Input.is_action_just_released("move_left") or Input.is_action_just_released("move_right"):
 		# 动画还没放完就松开，等待动画结束时根据输入判断
+		#player.velocity.x = move_toward(player.velocity.x, 0, player.RUN_ACCELECTION * delta)
+
 		print("released in running begin")
 			
 func on_animation_finished(anim_name):

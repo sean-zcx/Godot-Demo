@@ -809,3 +809,5 @@ script = ExtResource("41_art4l")
 [node name="MotionShape" type="CollisionShape2D" parent="."]
 position = Vector2(0, -160)
 shape = SubResource("RectangleShape2D_jd2rm")
+
+[connection signal="direction_changed" from="." to="." method="_on_direction_changed"]

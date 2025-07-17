@@ -1,11 +1,11 @@
-extends Node
+class_name Motion extends PlayerState
 
+func get_input_direction() -> Vector2:
+	return Vector2(
+			Input.get_axis(&"move_left", &"move_right"),
+			Input.get_axis(&"move_up", &"move_down")
+	)
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func update_look_direction(direction: Vector2) -> void:
+	if direction and owner.look_direction != direction:
+		owner.look_direction = direction

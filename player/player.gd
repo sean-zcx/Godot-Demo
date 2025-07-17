@@ -11,32 +11,31 @@ class_name Player extends CharacterBody2D
 var DEFAULE_GRAVITY = ProjectSettings.get_setting('physics/2d/default_gravity')
 enum FACING_DIRECTION{LEFT, RIGHT}
 
-#var direction = Vector2(0, 0):
-	#set(value):
-		#direction = value
-		#if (!is_zero_approx(direction.x)):
-			#animated_sprite_2d.scale.x = 1 if direction.x == DIRECTION.LEFT else -1
-#var face_direction = -1
-
-	
-var last_scale_x  = 1
-var is_turning = false
+var look_direction : Vector2
+var look_direction_changed = false
 
 
 func _ready() -> void:
 	print("Player ready")
+	look_direction = Vector2.LEFT
 
 func _physics_process(delta: float) -> void:
-	if not is_zero_approx(velocity.x): 
-		if velocity.x < 0.0:
-			animated_sprite_2d.scale.x = 1.0
+	var direction: Vector2 = get_input_direction()
+	if direction.x and look_direction.x !=  direction.x:
+		
+		print("[player.dg] look_direction changed")
+		look_direction_changed = true
+		look_direction.x = direction.x
+		
+		if  direction.x > 0:
+			animated_sprite_2d.scale.x = -1
 		else:
-			animated_sprite_2d.scale.x = -1.0
-			
-		if sign(last_scale_x) != sign(animated_sprite_2d.scale.x):
-			print('player is turning')
-			animation_player.play("turning")
-		last_scale_x = animated_sprite_2d.scale.x 
+			animated_sprite_2d.scale.x = 1
+	else:
+		look_direction_changed = false
 
-func get_movemonet_direction() -> Vector2:
-	return Vector2(Input.get_axis("move_left", "move_right"), Input.get_axis("move_up", "move_down"))
+func get_input_direction() -> Vector2:
+	return Vector2(
+			Input.get_axis(&"move_left", &"move_right"),
+			Input.get_axis(&"move_up", &"move_down")
+	)

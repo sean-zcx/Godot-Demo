@@ -1,13 +1,17 @@
 extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
-	player.velocity.x = 0.0
-	player.animation_player.play("idle_1")
+	player.velocity.x = 0
+	owner.animation_player.play("idle_1")
 
 func physics_process(delta: float) -> void:
-	player.velocity.y += player.DEFAULE_GRAVITY * delta
-	player.move_and_slide()
-	var input_direction_x := Input.get_axis("move_left", "move_right")
+	owner.velocity.y += owner.DEFAULE_GRAVITY * delta
+	var input_direction: Vector2 = player.get_input_direction()
+	owner.move_and_slide()
 	
-	if !is_zero_approx(input_direction_x):
+	if input_direction and player.look_direction_changed:
+		print("[idle.gd] detected direction changed ")
+		finished.emit(TURNING)
+		return
+	elif input_direction:
 		finished.emit(RUNNING_BEGIN)

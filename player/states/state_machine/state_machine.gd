@@ -39,7 +39,7 @@ func _transition_to_next_state(target_state_path: String, data: Dictionary = {})
 		printerr(owner.name + ": Trying to transition from " + state.name + " to state " + target_state_path + " but it does not exist.")
 		return
 
-	print(owner.name + ": Transition from [", state.name, "] to [", target_state_path, "]")
+	print("[", state.name, "] -> [", target_state_path, "]")
 	var previous_state_path := state.name
 	state.exit()
 	state = get_node(target_state_path)
@@ -47,5 +47,5 @@ func _transition_to_next_state(target_state_path: String, data: Dictionary = {})
 
 func _on_anim_finished(anim_name):
 	if state and "on_animation_finished" in state:
-		print("Calling [", state, "] on_animation_finished with anim name: ", anim_name)
+		#print("Calling [", state, "] on_animation_finished with anim name: ", anim_name)
 		state.on_animation_finished(anim_name)

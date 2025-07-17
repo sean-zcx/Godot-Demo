@@ -772,6 +772,9 @@ _data = {
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_65viv")
+RUN_SPEED = null
+RUN_END_SPEED = null
+RUN_ACCELECTION = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2uvqg")
@@ -788,17 +791,17 @@ speed_scale = 12.0
 script = ExtResource("21_knn7v")
 initial_state = NodePath("Idle")
 
-[node name="Jumping" type="Node" parent="StateMachine"]
-script = ExtResource("23_s7qer")
-
 [node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource("3_c35mf")
 
-[node name="Turning" type="Node" parent="StateMachine"]
-script = ExtResource("39_a2xo5")
-
 [node name="Running" type="Node" parent="StateMachine"]
 script = ExtResource("4_uw77l")
+
+[node name="Jumping" type="Node" parent="StateMachine"]
+script = ExtResource("23_s7qer")
+
+[node name="Turning" type="Node" parent="StateMachine"]
+script = ExtResource("39_a2xo5")
 
 [node name="RunningEnd" type="Node" parent="StateMachine"]
 script = ExtResource("6_5ejfk")
@@ -809,3 +812,5 @@ script = ExtResource("41_art4l")
 [node name="MotionShape" type="CollisionShape2D" parent="."]
 position = Vector2(0, -160)
 shape = SubResource("RectangleShape2D_jd2rm")
+
+[connection signal="direction_changed" from="." to="." method="_on_direction_changed"]
