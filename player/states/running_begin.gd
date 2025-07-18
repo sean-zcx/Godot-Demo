@@ -25,12 +25,8 @@ func physics_process(delta: float) -> void:
 			#finished.emit(IDLE)
 		
 	elif Input.is_action_just_released("move_left") or Input.is_action_just_released("move_right"):
-		# 动画还没放完就松开，等待动画结束时根据输入判断
-		#player.velocity.x = move_toward(player.velocity.x, 0, player.RUN_ACCELECTION * delta)
-
 		print("released in running begin")
 			
 func on_animation_finished(anim_name):
 	if anim_name == "running_begin"  or anim_name == "turning":
-		print("running_begin animation finished")
 		is_running_begin_anim_done = true

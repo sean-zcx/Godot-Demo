@@ -12,13 +12,13 @@ func physics_process(delta: float) -> void:
 	
 	
 	
-	if player.velocity.y < 150 and player.velocity.y > -150:
+	if player.velocity.y < 200 and player.velocity.y > -200:
 		player.animation_player.play("hang_in_air")
 	
-	elif player.is_on_floor():
+	if player.is_on_floor():
 		finished.emit(IDLE)
 		return
-	elif player.velocity.y >= 100:
+	elif player.velocity.y >= 200:
 		finished.emit(FALLING)
 		return
 	

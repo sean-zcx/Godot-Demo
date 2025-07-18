@@ -28,8 +28,6 @@
 [ext_resource type="Texture2D" uid="uid://b8fa58sp1s1so" path="res://player/sprites/idle_1/ma000_10.png" id="12_gswnw"]
 [ext_resource type="Texture2D" uid="uid://crhif7ltvdy5o" path="res://player/sprites/jumping/jump_14.png" id="13_6wior"]
 [ext_resource type="Texture2D" uid="uid://dou1metrmtdas" path="res://player/sprites/idle_1/ma000_11.png" id="13_xcnuv"]
-[ext_resource type="Texture2D" uid="uid://crdue1lm7m4op" path="res://player/sprites/jumping/ma020_00.png" id="14_fjxoa"]
-[ext_resource type="Texture2D" uid="uid://dtkkq4en8tbgc" path="res://player/sprites/jumping/ma020_01.png" id="15_gswnw"]
 [ext_resource type="Texture2D" uid="uid://uc6rjqj1sgis" path="res://player/sprites/running/ma032_01.png" id="17_7pqkx"]
 [ext_resource type="Texture2D" uid="uid://c6eh50xaasiak" path="res://player/sprites/running/ma032_02.png" id="18_uw77l"]
 [ext_resource type="Texture2D" uid="uid://bgtedp5kvds3e" path="res://player/sprites/running/ma032_03.png" id="19_rptt4"]
@@ -41,7 +39,9 @@
 [ext_resource type="Script" uid="uid://du0jjgmnvp3ly" path="res://player/states/jumping.gd" id="23_s7qer"]
 [ext_resource type="Texture2D" uid="uid://mpkl4rdlgjkp" path="res://player/sprites/running/ma032_08.png" id="24_5ejfk"]
 [ext_resource type="Texture2D" uid="uid://ced6oki053w3k" path="res://player/sprites/running/ma032_09.png" id="25_jd2rm"]
+[ext_resource type="Texture2D" uid="uid://dukvtv7883bt5" path="res://player/sprites/jumping/jump_1.png" id="26_7crtr"]
 [ext_resource type="Texture2D" uid="uid://bdict4brhexnx" path="res://player/sprites/running/ma032_10.png" id="26_q28gw"]
+[ext_resource type="Texture2D" uid="uid://bxnliru82eo6e" path="res://player/sprites/jumping/jump_2.png" id="27_vgvch"]
 [ext_resource type="Texture2D" uid="uid://uhyrlmq40rnc" path="res://player/sprites/running_end/ma032_11.png" id="28_1s1yo"]
 [ext_resource type="Texture2D" uid="uid://bi47c547jr1ec" path="res://player/sprites/running_end/ma032_12.png" id="29_5ejfk"]
 [ext_resource type="Texture2D" uid="uid://hgx52ec1bja1" path="res://player/sprites/running_begin/ma032_00.png" id="29_jd2rm"]
@@ -153,10 +153,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("14_fjxoa")
+"texture": ExtResource("26_7crtr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_gswnw")
+"texture": ExtResource("27_vgvch")
 }],
 "loop": true,
 "name": &"jumping",

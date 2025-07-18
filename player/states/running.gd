@@ -1,15 +1,20 @@
 extends PlayerState
 
+enum RunningPhase {
+	RUNNING_BEGIN,
+	RUNNING,
+	RUNING_END,
+}
+var runnint_phase = RunningPhase.RUNNING_BEGIN
+
+
 func enter(previous_state_path: String, data := {}) -> void:
-	#var input_direction := player.get_input_direction()
-	#player.update_look_direction(input_direction)
 	player.mode = player.MODE.MOTION
 
 	player.animation_player.play("running")
 
 func physics_process(delta: float) -> void:
 	var input_direction :=player. get_input_direction()
-	#player.update_look_direction(input_direction)
 	player.velocity.x = move_toward(player.velocity.x, player.RUN_SPEED * input_direction.x, player.RUN_ACCELECTION * delta)
 	player.move_and_slide()
 	var init_speed = player.velocity.x

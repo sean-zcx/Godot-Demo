@@ -3,7 +3,7 @@ extends PlayerState
 enum LandingPhase {
 	FALLING,
 	HIT_GROUND,
-	FINISHED
+	FINISHED,
 }
 
 var landing_phase := LandingPhase.FALLING

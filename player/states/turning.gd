@@ -31,5 +31,5 @@ func physics_process(delta: float) -> void:
 
 func on_animation_finished(anim_name):
 	if anim_name == "turning":	
-		print("turning finished")
+		#print("turning finished")
 		is_turning_done = true
