@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://drjkmyrrl0l6u"]
+[gd_scene load_steps=69 format=3 uid="uid://drjkmyrrl0l6u"]
 
 [ext_resource type="Script" uid="uid://cfhltnerm4jwu" path="res://player/player.gd" id="1_65viv"]
 [ext_resource type="Texture2D" uid="uid://c2ts2j1xl1jw" path="res://player/sprites/idle_1/ma000_00.png" id="2_jd2rm"]
@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://dityo0l7ykwdl" path="res://player/sprites/jumping/jump_4.png" id="5_n0b8q"]
 [ext_resource type="Texture2D" uid="uid://df6crua2hcntx" path="res://player/sprites/idle_1/ma000_03.png" id="5_pnw6m"]
 [ext_resource type="Texture2D" uid="uid://cm0yap7ro5is0" path="res://player/sprites/idle_1/ma000_04.png" id="6_1so5t"]
-[ext_resource type="Script" uid="uid://dvuuuq2ejux6p" path="res://player/states/running_end.gd" id="6_5ejfk"]
 [ext_resource type="Texture2D" uid="uid://xuxoqf8e7vv5" path="res://player/sprites/jumping/jump_5.png" id="6_jfgyi"]
 [ext_resource type="Texture2D" uid="uid://blou70ess617c" path="res://player/sprites/idle_1/ma000_05.png" id="7_55jnj"]
 [ext_resource type="Texture2D" uid="uid://c6l2q5swmncpn" path="res://player/sprites/jumping/jump_6.png" id="7_237xx"]
@@ -54,7 +53,6 @@
 [ext_resource type="Texture2D" uid="uid://dgudv0ek1dk03" path="res://player/sprites/running_end/ma032_15.png" id="32_ge24q"]
 [ext_resource type="Texture2D" uid="uid://3rg3kkvagmm7" path="res://player/sprites/turning/turning_4.png" id="34_55jnj"]
 [ext_resource type="Script" uid="uid://bhstho25w6nl2" path="res://player/states/turning.gd" id="39_a2xo5"]
-[ext_resource type="Script" uid="uid://dupaxolf74o3g" path="res://player/states/running_begin.gd" id="41_art4l"]
 [ext_resource type="Script" uid="uid://bcp8bmchexwvg" path="res://player/states/falling.gd" id="46_j55il"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2uvqg"]
@@ -1359,23 +1357,17 @@ speed_scale = 12.0
 script = ExtResource("21_knn7v")
 initial_state = NodePath("Idle")
 
-[node name="Jumping" type="Node" parent="StateMachine"]
-script = ExtResource("23_s7qer")
-
 [node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource("3_c35mf")
-
-[node name="Turning" type="Node" parent="StateMachine"]
-script = ExtResource("39_a2xo5")
 
 [node name="Running" type="Node" parent="StateMachine"]
 script = ExtResource("4_uw77l")
 
-[node name="RunningEnd" type="Node" parent="StateMachine"]
-script = ExtResource("6_5ejfk")
+[node name="Turning" type="Node" parent="StateMachine"]
+script = ExtResource("39_a2xo5")
 
-[node name="RunningBegin" type="Node" parent="StateMachine"]
-script = ExtResource("41_art4l")
+[node name="Jumping" type="Node" parent="StateMachine"]
+script = ExtResource("23_s7qer")
 
 [node name="Falling" type="Node" parent="StateMachine"]
 script = ExtResource("46_j55il")

@@ -18,12 +18,12 @@ func physics_process(delta: float) -> void:
 		finished.emit(FALLING)
 	elif is_turning_done:
 		if Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right"):
-			finished.emit(RUNNING_BEGIN)
+			finished.emit(RUNNING)
 		else:
 			finished.emit(IDLE)
 	else:
 		if Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right"):
-			player.animation_player.speed_scale *= 1
+			player.animation_player.speed_scale *= 0.9
 			#pass
 		else:
 			player.animation_player.speed_scale *= 1.2

@@ -2,7 +2,6 @@ extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
 	player.mode = player.MODE.MOTION
-	#player.velocity.x = 0
 	owner.animation_player.play("idle_1")
 
 func physics_process(delta: float) -> void:
@@ -21,5 +20,5 @@ func physics_process(delta: float) -> void:
 		print("[idle.gd] detected direction changed ")
 		finished.emit(TURNING)
 		return
-	elif input_direction:
-		finished.emit(RUNNING_BEGIN)
+	elif input_direction.x:
+		finished.emit(RUNNING)

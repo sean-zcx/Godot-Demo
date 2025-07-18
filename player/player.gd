@@ -21,14 +21,6 @@ var jump_impulse = 400
 
 func _ready() -> void:
 	print("Player ready", global_scale)
-	
-	#RUN_SPEED = 300 * global_scale.x / 0.25
-	#IN_AIR_SPEED = 200 * global_scale.x / 0.25
-	#RUN_END_SPEED = 100 * global_scale.x / 0.25
-	#RUN_ACCELECTION = 800 * global_scale.x / 0.25
-	#IN_AIR_ACCELECTION = 400 * global_scale.x / 0.25
-	#RUN_TURNING_SPEED = RUN_ACCELECTION / 10
-	
 	mode = MODE.MOTION
 	look_direction = Vector2.LEFT
 

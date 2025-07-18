@@ -10,8 +10,6 @@ func physics_process(delta: float) -> void:
 	player.velocity.y += player.DEFAULE_GRAVITY * delta
 	player.move_and_slide()
 	
-	
-	
 	if player.velocity.y < 200 and player.velocity.y > -200:
 		player.animation_player.play("hang_in_air")
 	
