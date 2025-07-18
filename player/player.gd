@@ -1,8 +1,10 @@
 class_name Player extends CharacterBody2D
 
-@export var RUN_SPEED:float = 350
+@export var RUN_SPEED:float = 270
+@export var IN_AIR_SPEED:float = 200
 @export var RUN_END_SPEED: float = 100
-@export var RUN_ACCELECTION:float = 1000
+@export var RUN_ACCELECTION:float = 800
+@export var IN_AIR_ACCELECTION:float = 400
 @export var RUN_TURNING_SPEED:float = RUN_ACCELECTION / 10
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -10,18 +12,29 @@ class_name Player extends CharacterBody2D
 
 var DEFAULE_GRAVITY = ProjectSettings.get_setting('physics/2d/default_gravity')
 enum FACING_DIRECTION{LEFT, RIGHT}
+enum MODE{MOTION, COMBAT}
 
 var look_direction : Vector2
 var look_direction_changed = false
-
+var mode = MODE.MOTION
+var jump_impulse = 400
 
 func _ready() -> void:
-	print("Player ready")
+	print("Player ready", global_scale)
+	
+	#RUN_SPEED = 300 * global_scale.x / 0.25
+	#IN_AIR_SPEED = 200 * global_scale.x / 0.25
+	#RUN_END_SPEED = 100 * global_scale.x / 0.25
+	#RUN_ACCELECTION = 800 * global_scale.x / 0.25
+	#IN_AIR_ACCELECTION = 400 * global_scale.x / 0.25
+	#RUN_TURNING_SPEED = RUN_ACCELECTION / 10
+	
+	mode = MODE.MOTION
 	look_direction = Vector2.LEFT
 
 func _physics_process(delta: float) -> void:
 	var direction: Vector2 = get_input_direction()
-	if direction.x and look_direction.x !=  direction.x:
+	if direction.x and look_direction.x !=  direction.x and mode == MODE.MOTION:
 		
 		print("[player.dg] look_direction changed")
 		look_direction_changed = true

@@ -3,6 +3,8 @@ extends PlayerState
 func enter(previous_state_path: String, data := {}) -> void:
 	#var input_direction := player.get_input_direction()
 	#player.update_look_direction(input_direction)
+	player.mode = player.MODE.MOTION
+
 	player.animation_player.play("running")
 
 func physics_process(delta: float) -> void:
@@ -12,7 +14,11 @@ func physics_process(delta: float) -> void:
 	player.move_and_slide()
 	var init_speed = player.velocity.x
 	
-	if(player.look_direction_changed):
+	if Input.is_action_just_pressed("jump"):
+		finished.emit(JUMPING)
+	elif !player.is_on_floor():
+		finished.emit(FALLING)
+	elif(player.look_direction_changed):
 		print("[running.gd] detected direction changed ")
 		finished.emit(TURNING)
 	elif Input.is_action_just_released("move_left") or Input.is_action_just_released("move_right"):
