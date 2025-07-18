@@ -5,6 +5,7 @@ class_name Player extends CharacterBody2D
 @export var RUN_END_SPEED: float = 100
 @export var RUN_ACCELECTION:float = 800
 @export var IN_AIR_ACCELECTION:float = 400
+@export var STEP_ACCELECTION:float = 2000
 @export var RUN_TURNING_SPEED:float = RUN_ACCELECTION / 10
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
