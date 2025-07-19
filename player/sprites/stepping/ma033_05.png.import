@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4ufyduh1cuwg"
-path="res://.godot/imported/ma033_01.png-0dae05b90e6aae1eb119e15295df50fe.ctex"
+uid="uid://h54ul6twdkvb"
+path="res://.godot/imported/ma033_05.png-a7c127668ee020638e639fd5b75b3b2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/sprites/stepping_back/ma033_01.png"
-dest_files=["res://.godot/imported/ma033_01.png-0dae05b90e6aae1eb119e15295df50fe.ctex"]
+source_file="res://player/sprites/stepping/ma033_05.png"
+dest_files=["res://.godot/imported/ma033_05.png-a7c127668ee020638e639fd5b75b3b2a.ctex"]
 
 [params]
 

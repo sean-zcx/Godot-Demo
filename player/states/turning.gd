@@ -21,15 +21,17 @@ func physics_process(delta: float) -> void:
 			finished.emit(RUNNING)
 		else:
 			finished.emit(IDLE)
+	elif Input.is_action_just_pressed("step_back"):
+		finished.emit(STEPPING)
+		return
 	else:
 		if Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right"):
 			player.animation_player.speed_scale *= 0.9
 			#pass
 		else:
 			player.animation_player.speed_scale *= 1.2
-		
 
 func on_animation_finished(anim_name):
-	if anim_name == "turning":	
+	if anim_name == "turning":
 		#print("turning finished")
 		is_turning_done = true

@@ -6,7 +6,7 @@ func enter(previous_state_path: String, data := {}) -> void:
 
 func physics_process(delta: float) -> void:
 	owner.velocity.y += owner.DEFAULE_GRAVITY * delta
-	player.velocity.x = move_toward(player.velocity.x , 0, player.RUN_ACCELECTION * 2 * delta)
+	player.velocity.x = move_toward(player.velocity.x, 0, player.RUN_ACCELECTION * 2 * delta)
 
 	var input_direction: Vector2 = player.get_input_direction()
 	owner.move_and_slide()
@@ -25,11 +25,11 @@ func physics_process(delta: float) -> void:
 		finished.emit(RUNNING)
 		return
 	if Input.is_action_just_pressed("step_back"):
-		player.velocity.x = move_toward(600 , 0, player.RUN_ACCELECTION * delta)
-		player.animation_player.play("stepping_back")
+		finished.emit(STEPPING)
+		return
 
 
-func on_animation_finished(anim_name):
-	if anim_name == "stepping_back":
-		print("stepping_back finished")
-		player.animation_player.play("idle_1")
+#func on_animation_finished(anim_name):
+	#if anim_name == "stepping_back":
+		#print("stepping_back finished")
+		#player.animation_player.play("idle_1")

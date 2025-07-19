@@ -1,7 +1,8 @@
 extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
-	player.velocity.y = -player.jump_impulse
+	player.mode = player.MODE.MOTION
+	player.velocity.y = - player.JUMP_IMPUSE
 	player.animation_player.play("jumping")
 
 func physics_process(delta: float) -> void:
@@ -19,4 +20,3 @@ func physics_process(delta: float) -> void:
 	elif player.velocity.y >= 200:
 		finished.emit(FALLING)
 		return
-	

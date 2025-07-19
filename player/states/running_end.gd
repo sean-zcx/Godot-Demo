@@ -1,7 +1,7 @@
 extends PlayerState
 
-var init_speed :float
-var is_running_end_anim_done : bool
+var init_speed: float
+var is_running_end_anim_done: bool
 
 func enter(previous_state_path: String, data := {}) -> void:
 	player.mode = player.MODE.MOTION
@@ -23,7 +23,7 @@ func physics_process(delta: float) -> void:
 		finished.emit(JUMPING)
 	elif !player.is_on_floor():
 		finished.emit(FALLING)
-	elif(player.look_direction_changed):
+	elif (player.look_direction_changed):
 		print("[running_end.gd] detected direction changed ")
 		finished.emit(TURNING)
 	elif is_running_end_anim_done:

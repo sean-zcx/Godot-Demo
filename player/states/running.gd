@@ -24,11 +24,9 @@ func physics_process(delta: float) -> void:
 	if !player.is_on_floor():
 		finished.emit(FALLING)
 		return
-
 	if Input.is_action_just_pressed("jump"):
 		finished.emit(JUMPING)
 		return
-
 	if player.look_direction_changed:
 		print("[running.gd] detected direction changed ")
 		finished.emit(TURNING)
@@ -40,8 +38,10 @@ func physics_process(delta: float) -> void:
 		player.animation_player.play("running_end_2")
 		running_phase = RunningPhase.RUNNING_END
 		print("[RUNNING]: RUNNING_END")
-	if !player.velocity.x:
-		finished.emit(IDLE)
+
+	if Input.is_action_just_pressed("step_back"):
+		finished.emit(STEPPING)
+		return
 		
 	match running_phase:
 		RunningPhase.RUNNING_BEGIN:

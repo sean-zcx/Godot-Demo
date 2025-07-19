@@ -9,6 +9,7 @@ enum LandingPhase {
 var landing_phase := LandingPhase.FALLING
 
 func enter(previous_state_path: String, data := {}) -> void:
+	player.mode = player.MODE.MOTION
 	landing_phase = LandingPhase.FALLING
 	player.animation_player.play("falling")
 
@@ -27,6 +28,10 @@ func physics_process(delta: float) -> void:
 		LandingPhase.HIT_GROUND:
 			if Input.is_action_just_pressed("jump"):
 				finished.emit(JUMPING)
+				return
+			if Input.is_action_just_pressed("step_back"):
+				finished.emit(STEPPING)
+				return
 		LandingPhase.FINISHED:
 			finished.emit(IDLE)
 
