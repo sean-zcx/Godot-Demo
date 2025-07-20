@@ -36,6 +36,9 @@ func physics_process(delta: float) -> void:
 	if is_stepping_anim_done:
 		finished.emit(IDLE)
 		return
+	if Input.is_action_pressed("move_down"):
+		finished.emit(CROUCHING, {"phase": CrouchingPhase.CROUCHING_DOWN})
+		return
 
 func on_animation_finished(anim_name):
 	if anim_name == "stepping":

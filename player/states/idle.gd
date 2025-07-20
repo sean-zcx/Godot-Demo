@@ -2,6 +2,9 @@ extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
 	player.mode = player.MODE.MOTION
+	player.stand_shape.disabled = false
+	player.crouch_shape.disabled = true
+	
 	owner.animation_player.play("idle_1")
 
 func physics_process(delta: float) -> void:
@@ -27,7 +30,9 @@ func physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("step_back"):
 		finished.emit(STEPPING)
 		return
-
+	if Input.is_action_pressed("move_down"):
+		finished.emit(CROUCHING, {"phase": CrouchingPhase.CROUCHING_DOWN})
+		return
 
 #func on_animation_finished(anim_name):
 	#if anim_name == "stepping_back":

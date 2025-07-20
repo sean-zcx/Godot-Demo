@@ -10,6 +10,8 @@ class_name Player extends CharacterBody2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var stand_shape: CollisionShape2D = $StandShape
+@onready var crouch_shape: CollisionShape2D = $CrouchShape
 
 var DEFAULE_GRAVITY = ProjectSettings.get_setting('physics/2d/default_gravity')
 enum FACING_DIRECTION {

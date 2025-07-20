@@ -6,6 +6,28 @@ const TURNING = "Turning"
 const JUMPING = "Jumping"
 const FALLING = "Falling"
 const STEPPING = "Stepping"
+const CROUCHING = "Crouching"
+
+
+enum RunningPhase {
+	RUNNING_BEGIN,
+	RUNNING,
+	RUNNING_END,
+	RUNNING_DONE,
+}
+
+enum CrouchingPhase {
+	CROUCHING_DOWN,
+	CROUCHING_STILL,
+	CROUCHING_UP,
+	CROUCHING_DONE,
+}
+
+enum LandingPhase {
+	FALLING,
+	HIT_GROUND,
+	FINISHED,
+}
 
 var player: Player
 

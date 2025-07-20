@@ -1,11 +1,6 @@
 extends PlayerState
 
-enum RunningPhase {
-	RUNNING_BEGIN,
-	RUNNING,
-	RUNNING_END,
-	RUNNING_DONE,
-}
+
 
 var running_phase = RunningPhase.RUNNING_BEGIN
 
@@ -38,11 +33,12 @@ func physics_process(delta: float) -> void:
 		player.animation_player.play("running_end_2")
 		running_phase = RunningPhase.RUNNING_END
 		print("[RUNNING]: RUNNING_END")
-
 	if Input.is_action_just_pressed("step_back"):
 		finished.emit(STEPPING)
 		return
-		
+	if Input.is_action_pressed("move_down"):
+		finished.emit(CROUCHING, {"phase": CrouchingPhase.CROUCHING_DOWN})
+		return
 	match running_phase:
 		RunningPhase.RUNNING_BEGIN:
 			# do nothing here; wait for animation to finish and switch phase
