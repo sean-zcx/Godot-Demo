@@ -1,39 +1,50 @@
-[gd_scene load_steps=97 format=3 uid="uid://drjkmyrrl0l6u"]
+[gd_scene load_steps=119 format=3 uid="uid://drjkmyrrl0l6u"]
 
 [ext_resource type="Script" uid="uid://cfhltnerm4jwu" path="res://player/player.gd" id="1_65viv"]
 [ext_resource type="Texture2D" uid="uid://carlgjqnptge3" path="res://player/sprites/crouching/ma010_00.png" id="2_48p26"]
+[ext_resource type="Texture2D" uid="uid://dlspe6gg7fh5h" path="res://player/sprites/crouch_stabbing/ma540_00.png" id="2_gcmgo"]
 [ext_resource type="Texture2D" uid="uid://c2ts2j1xl1jw" path="res://player/sprites/idle_1/ma000_00.png" id="2_jd2rm"]
 [ext_resource type="Texture2D" uid="uid://c31gn7t2nujam" path="res://player/sprites/jumping/jump_8.png" id="2_xcnuv"]
 [ext_resource type="Texture2D" uid="uid://ddfuu1jues4kq" path="res://player/sprites/crouching/ma010_01.png" id="3_anp34"]
 [ext_resource type="Script" uid="uid://b1d7srggg5oge" path="res://player/states/idle.gd" id="3_c35mf"]
 [ext_resource type="Texture2D" uid="uid://dew3ynjoudlg1" path="res://player/sprites/jumping/jump_9.png" id="3_j55il"]
 [ext_resource type="Texture2D" uid="uid://ciixxuv1i6k4l" path="res://player/sprites/idle_1/ma000_01.png" id="3_q28gw"]
+[ext_resource type="Texture2D" uid="uid://vcbvgpsexpmk" path="res://player/sprites/crouch_stabbing/ma540_01.png" id="3_rnncm"]
 [ext_resource type="Texture2D" uid="uid://tlo7i7l2bww" path="res://player/sprites/idle_1/ma000_02.png" id="4_ge24q"]
 [ext_resource type="Texture2D" uid="uid://caadqrk36md2p" path="res://player/sprites/crouching/ma010_02.png" id="4_jdjat"]
+[ext_resource type="Texture2D" uid="uid://dt7br277wixig" path="res://player/sprites/crouch_stabbing/ma540_02.png" id="4_nj2w7"]
 [ext_resource type="Script" uid="uid://cuctu056mc3w8" path="res://player/states/running.gd" id="4_uw77l"]
 [ext_resource type="Texture2D" uid="uid://rnsj3ag1hlbb" path="res://player/sprites/jumping/jump_3.png" id="4_w7j2h"]
+[ext_resource type="Texture2D" uid="uid://drn508dof7e47" path="res://player/sprites/crouch_stabbing/ma540_03.png" id="5_iojyt"]
 [ext_resource type="Texture2D" uid="uid://b8e38ui5itnc3" path="res://player/sprites/crouching/ma010_03.png" id="5_j420s"]
 [ext_resource type="Texture2D" uid="uid://dityo0l7ykwdl" path="res://player/sprites/jumping/jump_4.png" id="5_n0b8q"]
 [ext_resource type="Texture2D" uid="uid://df6crua2hcntx" path="res://player/sprites/idle_1/ma000_03.png" id="5_pnw6m"]
 [ext_resource type="Texture2D" uid="uid://cm0yap7ro5is0" path="res://player/sprites/idle_1/ma000_04.png" id="6_1so5t"]
 [ext_resource type="Texture2D" uid="uid://xuxoqf8e7vv5" path="res://player/sprites/jumping/jump_5.png" id="6_jfgyi"]
 [ext_resource type="Texture2D" uid="uid://llmofiqychmi" path="res://player/sprites/crouching/ma010_04.png" id="6_kcq4v"]
+[ext_resource type="Texture2D" uid="uid://dnhsrtmngxld7" path="res://player/sprites/crouch_stabbing/ma540_04.png" id="6_vhicv"]
 [ext_resource type="Texture2D" uid="uid://blou70ess617c" path="res://player/sprites/idle_1/ma000_05.png" id="7_55jnj"]
 [ext_resource type="Texture2D" uid="uid://c6l2q5swmncpn" path="res://player/sprites/jumping/jump_6.png" id="7_237xx"]
+[ext_resource type="Texture2D" uid="uid://bptnlbvy3rjhm" path="res://player/sprites/crouch_stabbing/ma540_05.png" id="7_hrakr"]
 [ext_resource type="Texture2D" uid="uid://mmnjct61ivwk" path="res://player/sprites/crouching/ma010_05.png" id="7_qavcc"]
 [ext_resource type="Texture2D" uid="uid://b45ku1shfging" path="res://player/sprites/crouching/ma010_06.png" id="8_bd26m"]
 [ext_resource type="Texture2D" uid="uid://bg1apwj26vljb" path="res://player/sprites/idle_1/ma000_06.png" id="8_dx5ib"]
 [ext_resource type="Texture2D" uid="uid://doommtp4yrp1s" path="res://player/sprites/jumping/jump_7.png" id="8_wpyo2"]
+[ext_resource type="Texture2D" uid="uid://bhhe82tfrgqi1" path="res://player/sprites/crouch_stabbing/ma540_06.png" id="8_wsa1w"]
+[ext_resource type="Texture2D" uid="uid://bke60px0xyr3q" path="res://player/sprites/crouch_stabbing/ma540_07.png" id="9_2s0vo"]
 [ext_resource type="Texture2D" uid="uid://c1rm1u2lg5jbf" path="res://player/sprites/jumping/jump_10.png" id="9_7crtr"]
 [ext_resource type="Texture2D" uid="uid://b37kqs7h8q3gn" path="res://player/sprites/idle_1/ma000_07.png" id="9_a2xo5"]
 [ext_resource type="Texture2D" uid="uid://ceall2w3db7kk" path="res://player/sprites/crouching/ma010_07.png" id="9_lufic"]
 [ext_resource type="Texture2D" uid="uid://4fl6us3n1446" path="res://player/sprites/idle_1/ma000_08.png" id="10_art4l"]
+[ext_resource type="Texture2D" uid="uid://16dy3jgnxip" path="res://player/sprites/crouch_stabbing/ma540_08.png" id="10_hgm8h"]
 [ext_resource type="Texture2D" uid="uid://65knysqye8d6" path="res://player/sprites/crouching/ma010_08.png" id="10_nxclr"]
 [ext_resource type="Texture2D" uid="uid://crb2htv0mw2wx" path="res://player/sprites/jumping/jump_11.png" id="10_vgvch"]
 [ext_resource type="Texture2D" uid="uid://5ikxhv8m6fp" path="res://player/sprites/jumping/jump_12.png" id="11_a1u5o"]
 [ext_resource type="Texture2D" uid="uid://dmqg8yvk8bcca" path="res://player/sprites/idle_1/ma000_09.png" id="11_fjxoa"]
+[ext_resource type="Texture2D" uid="uid://cb3w81gcu6a55" path="res://player/sprites/crouch_stabbing/ma540_09.png" id="11_ig2t1"]
 [ext_resource type="Texture2D" uid="uid://df6lmmyafcudu" path="res://player/sprites/crouching/ma010_09.png" id="11_onxu2"]
 [ext_resource type="Texture2D" uid="uid://dixauuc00d570" path="res://player/sprites/jumping/jump_13.png" id="12_3dxkp"]
+[ext_resource type="Texture2D" uid="uid://cna2xjh54tvf7" path="res://player/sprites/crouch_stabbing/ma540_10.png" id="12_7xdiq"]
 [ext_resource type="Texture2D" uid="uid://clqr1yaml0bdr" path="res://player/sprites/crouching/ma010_10.png" id="12_gci7n"]
 [ext_resource type="Texture2D" uid="uid://b8fa58sp1s1so" path="res://player/sprites/idle_1/ma000_10.png" id="12_gswnw"]
 [ext_resource type="Texture2D" uid="uid://crhif7ltvdy5o" path="res://player/sprites/jumping/jump_14.png" id="13_6wior"]
@@ -67,19 +78,66 @@
 [ext_resource type="Texture2D" uid="uid://dgudv0ek1dk03" path="res://player/sprites/running_end/ma032_15.png" id="32_ge24q"]
 [ext_resource type="Texture2D" uid="uid://3rg3kkvagmm7" path="res://player/sprites/turning/turning_4.png" id="34_55jnj"]
 [ext_resource type="Script" uid="uid://bhstho25w6nl2" path="res://player/states/turning.gd" id="39_a2xo5"]
+[ext_resource type="Texture2D" uid="uid://8iyttuprmkw2" path="res://player/sprites/rolling/ma110_00.png" id="42_nxclr"]
+[ext_resource type="Texture2D" uid="uid://cwlr7jcarcu1t" path="res://player/sprites/rolling/ma110_01.png" id="43_onxu2"]
+[ext_resource type="Texture2D" uid="uid://c3k4q7erpvana" path="res://player/sprites/rolling/ma110_02.png" id="44_gci7n"]
 [ext_resource type="Texture2D" uid="uid://dcse7ah33tr5c" path="res://player/sprites/stepping/ma033_00.png" id="44_p5tca"]
 [ext_resource type="Texture2D" uid="uid://c4ufyduh1cuwg" path="res://player/sprites/stepping/ma033_01.png" id="45_jbx34"]
+[ext_resource type="Texture2D" uid="uid://iux4ampil3nf" path="res://player/sprites/rolling/ma110_03.png" id="45_tcwf7"]
+[ext_resource type="Texture2D" uid="uid://xh57andpdwrx" path="res://player/sprites/rolling/ma110_04.png" id="46_20bc7"]
 [ext_resource type="Script" uid="uid://bcp8bmchexwvg" path="res://player/states/falling.gd" id="46_j55il"]
 [ext_resource type="Texture2D" uid="uid://hr1mrtxmurh2" path="res://player/sprites/stepping/ma033_02.png" id="46_s3g0c"]
 [ext_resource type="Texture2D" uid="uid://ca4bd78lsywju" path="res://player/sprites/stepping/ma033_03.png" id="47_35wys"]
+[ext_resource type="Texture2D" uid="uid://dtwmt2k2vycxw" path="res://player/sprites/rolling/ma110_05.png" id="47_jfgxe"]
 [ext_resource type="Texture2D" uid="uid://bd4rp2sid8o22" path="res://player/sprites/stepping/ma033_04.png" id="48_pjwc4"]
+[ext_resource type="Texture2D" uid="uid://p5d6qlyxlkcf" path="res://player/sprites/rolling/ma110_06.png" id="48_yg0n1"]
 [ext_resource type="Texture2D" uid="uid://h54ul6twdkvb" path="res://player/sprites/stepping/ma033_05.png" id="49_or4qq"]
 [ext_resource type="Texture2D" uid="uid://cu7po425mp2xg" path="res://player/sprites/stepping/ma033_06.png" id="50_hggc2"]
 [ext_resource type="Script" uid="uid://d3b0gne0vbax4" path="res://player/states/stepping.gd" id="62_jbx34"]
 [ext_resource type="Script" uid="uid://xm4inefr26nh" path="res://player/states/crouching.gd" id="77_anp34"]
+[ext_resource type="Script" uid="uid://cx2kxoa8lvnw3" path="res://player/states/rolling.gd" id="85_onxu2"]
+[ext_resource type="Script" uid="uid://h04dga3f3qe1" path="res://player/states/crouch_stabbing.gd" id="97_rnncm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2uvqg"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gcmgo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rnncm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nj2w7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_iojyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vhicv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hrakr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wsa1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2s0vo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hgm8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ig2t1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7xdiq")
+}],
+"loop": true,
+"name": &"crouch_stabbing",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_48p26")
@@ -228,6 +286,32 @@ animations = [{
 }],
 "loop": true,
 "name": &"jumping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_nxclr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_onxu2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_gci7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_tcwf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_20bc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_jfgxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_yg0n1")
+}],
+"loop": true,
+"name": &"rolling",
 "speed": 5.0
 }, {
 "frames": [{
@@ -461,6 +545,382 @@ tracks/9/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_48p26"]
+resource_name = "crouching_down"
+length = 2.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:sprite_frames")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"crouching", &"crouching"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:speed_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:centered")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D:offset")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimatedSprite2D:flip_v")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimatedSprite2D:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimatedSprite2D:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimationPlayer:speed_scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [15.0, 15.0]
+}
+
+[sub_resource type="Animation" id="Animation_anp34"]
+resource_name = "crouching_still"
+length = 12.0
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:sprite_frames")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 11),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 11),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"crouching", &"crouching"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:speed_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 11),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:centered")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 11),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D:offset")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 11),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 11),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimatedSprite2D:flip_v")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 11),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimatedSprite2D:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 11),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimatedSprite2D:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimationPlayer:speed_scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 11),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [8.0, 8.0]
+}
+
+[sub_resource type="Animation" id="Animation_jdjat"]
+resource_name = "crouching_up"
+length = 2.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:sprite_frames")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"crouching", &"crouching"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:speed_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:centered")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D:offset")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimatedSprite2D:flip_v")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimatedSprite2D:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimatedSprite2D:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimationPlayer:speed_scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [15.0, 15.0]
 }
 
 [sub_resource type="Animation" id="Animation_xcnuv"]
@@ -1570,9 +2030,9 @@ tracks/6/keys = {
 "values": [true, true, true, false]
 }
 
-[sub_resource type="Animation" id="Animation_48p26"]
-resource_name = "crouching_down"
-length = 2.0
+[sub_resource type="Animation" id="Animation_qjt2w"]
+resource_name = "rolling"
+length = 7.0
 step = 1.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1581,7 +2041,7 @@ tracks/0/path = NodePath("AnimatedSprite2D:sprite_frames")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg")]
@@ -1593,10 +2053,10 @@ tracks/1/path = NodePath("AnimatedSprite2D:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [&"crouching", &"crouching"]
+"values": [&"rolling", &"rolling"]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -1605,7 +2065,7 @@ tracks/2/path = NodePath("AnimatedSprite2D:speed_scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [1.0, 1.0]
@@ -1617,7 +2077,7 @@ tracks/3/path = NodePath("AnimatedSprite2D:centered")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, true]
@@ -1629,7 +2089,7 @@ tracks/4/path = NodePath("AnimatedSprite2D:offset")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(0, 0)]
@@ -1641,7 +2101,7 @@ tracks/5/path = NodePath("AnimatedSprite2D:flip_h")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, false]
@@ -1653,7 +2113,7 @@ tracks/6/path = NodePath("AnimatedSprite2D:flip_v")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, false]
@@ -1665,7 +2125,7 @@ tracks/7/path = NodePath("AnimatedSprite2D:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(0, 0)]
@@ -1677,10 +2137,10 @@ tracks/8/path = NodePath("AnimatedSprite2D:frame")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1]
+"values": [0, 1, 2, 3, 4, 5, 6]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -1689,16 +2149,15 @@ tracks/9/path = NodePath("AnimationPlayer:speed_scale")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [15.0, 15.0]
 }
 
-[sub_resource type="Animation" id="Animation_anp34"]
-resource_name = "crouching_still"
-length = 12.0
-loop_mode = 1
+[sub_resource type="Animation" id="Animation_d0gtc"]
+resource_name = "crouch_stabbing"
+length = 11.0
 step = 1.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1707,7 +2166,7 @@ tracks/0/path = NodePath("AnimatedSprite2D:sprite_frames")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 11),
+"times": PackedFloat32Array(0, 10),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg")]
@@ -1719,10 +2178,10 @@ tracks/1/path = NodePath("AnimatedSprite2D:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 11),
+"times": PackedFloat32Array(0, 10),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [&"crouching", &"crouching"]
+"values": [&"crouch_stabbing", &"crouch_stabbing"]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -1731,7 +2190,7 @@ tracks/2/path = NodePath("AnimatedSprite2D:speed_scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 11),
+"times": PackedFloat32Array(0, 10),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [1.0, 1.0]
@@ -1743,7 +2202,7 @@ tracks/3/path = NodePath("AnimatedSprite2D:centered")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 11),
+"times": PackedFloat32Array(0, 10),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, true]
@@ -1755,7 +2214,7 @@ tracks/4/path = NodePath("AnimatedSprite2D:offset")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 11),
+"times": PackedFloat32Array(0, 10),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(0, 0)]
@@ -1767,7 +2226,7 @@ tracks/5/path = NodePath("AnimatedSprite2D:flip_h")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 11),
+"times": PackedFloat32Array(0, 10),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, false]
@@ -1779,7 +2238,7 @@ tracks/6/path = NodePath("AnimatedSprite2D:flip_v")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 11),
+"times": PackedFloat32Array(0, 10),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, false]
@@ -1791,10 +2250,10 @@ tracks/7/path = NodePath("AnimatedSprite2D:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 11),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, 0)]
+"values": [Vector2(0, 0)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -1803,10 +2262,10 @@ tracks/8/path = NodePath("AnimatedSprite2D:frame")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -1815,140 +2274,33 @@ tracks/9/path = NodePath("AnimationPlayer:speed_scale")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0, 11),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [8.0, 8.0]
-}
-
-[sub_resource type="Animation" id="Animation_jdjat"]
-resource_name = "crouching_up"
-length = 2.0
-step = 1.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:sprite_frames")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [SubResource("SpriteFrames_2uvqg"), SubResource("SpriteFrames_2uvqg")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [&"crouching", &"crouching"]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimatedSprite2D:speed_scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [1.0, 1.0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AnimatedSprite2D:centered")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, true]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("AnimatedSprite2D:offset")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 0)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("AnimatedSprite2D:flip_h")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, false]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("AnimatedSprite2D:flip_v")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, false]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("AnimatedSprite2D:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 0)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("AnimatedSprite2D:frame")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [1, 0]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("AnimationPlayer:speed_scale")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 10),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [15.0, 15.0]
+}
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("StateMachine/CrouchStabbing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(4, 9),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [true],
+"method": &"set_is_move"
+}, {
+"args": [false],
+"method": &"set_is_move"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jd2rm"]
 _data = {
 &"RESET": SubResource("Animation_5ejfk"),
+&"crouch_stabbing": SubResource("Animation_d0gtc"),
 &"crouching_down": SubResource("Animation_48p26"),
 &"crouching_still": SubResource("Animation_anp34"),
 &"crouching_up": SubResource("Animation_jdjat"),
@@ -1957,6 +2309,7 @@ _data = {
 &"hitting_ground": SubResource("Animation_vgvch"),
 &"idle_1": SubResource("Animation_1s1yo"),
 &"jumping": SubResource("Animation_fjxoa"),
+&"rolling": SubResource("Animation_qjt2w"),
 &"running": SubResource("Animation_ge24q"),
 &"running_begin": SubResource("Animation_q28gw"),
 &"running_end": SubResource("Animation_pnw6m"),
@@ -2010,10 +2363,18 @@ script = ExtResource("62_jbx34")
 [node name="Crouching" type="Node" parent="StateMachine"]
 script = ExtResource("77_anp34")
 
+[node name="Rolling" type="Node" parent="StateMachine"]
+script = ExtResource("85_onxu2")
+
+[node name="CrouchStabbing" type="Node" parent="StateMachine"]
+script = ExtResource("97_rnncm")
+
 [node name="StandShape" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, -160)
 shape = SubResource("RectangleShape2D_jd2rm")
 
 [node name="CrouchShape" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, -80)
 shape = SubResource("RectangleShape2D_jbx34")

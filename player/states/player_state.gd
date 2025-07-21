@@ -7,6 +7,8 @@ const JUMPING = "Jumping"
 const FALLING = "Falling"
 const STEPPING = "Stepping"
 const CROUCHING = "Crouching"
+const ROLLING = "Rolling"
+const CROUCH_STABBING = "CrouchStabbing"
 
 
 enum RunningPhase {

@@ -3,6 +3,8 @@ class_name Player extends CharacterBody2D
 @export var RUN_SPEED: float = 270
 @export var IN_AIR_SPEED: float = 200
 @export var STEP_SPEED: float = 400
+@export var ROLL_SPEED: float = 450
+@export var CROUCH_STAB_SPEED: float = 1000
 @export var RUN_ACCELECTION: float = 1500
 @export var IN_AIR_ACCELECTION: float = 1000
 @export var STEP_ACCELECTION: float = 2000
@@ -12,6 +14,7 @@ class_name Player extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var stand_shape: CollisionShape2D = $StandShape
 @onready var crouch_shape: CollisionShape2D = $CrouchShape
+#@onready var platform_detector: RayCast2D = $RayCast2D
 
 var DEFAULE_GRAVITY = ProjectSettings.get_setting('physics/2d/default_gravity')
 enum FACING_DIRECTION {
